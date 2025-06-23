@@ -58,7 +58,7 @@ SignVLM combines visual features, optical flow motion data, and pose landmarks t
 - Direct projection to LLM space
 - Best performing variant in experiments
 
-### 6. **SignVLMSimple** ⭐ **Recommended**
+### 6. **SignVLMSimple**
 - Concatenates all modality features
 - Passes through MLP to LLM input space
 - Special landmark emphasis (2x weighting)
