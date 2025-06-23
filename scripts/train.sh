@@ -4,7 +4,7 @@
 #SBATCH --time=720
 #SBATCH --output=logs/train_%j.out
 
-# Change to your working directory first
+# Change to working directory 
 cd /work/scratch/tdieudonne
 
 # Set up environment without conflicting PYTHONPATH
