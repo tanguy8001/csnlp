@@ -14,11 +14,11 @@ SignVLM combines visual features, optical flow motion data, and pose landmarks t
 ## 📁 Project Structure
 
 ```
-├── sign_vlm.py              # Core model architectures (7 variants)
+├── sign_vlm.py              # Core model architectures
 ├── train.py                 # Training script with all configurations
 ├── datasets/
 │   ├── phoenix_simplified.py    # Phoenix14T dataset loader
-│   ├── asl_dataset.py           # Alternative dataset implementation
+│   ├── asl_dataset.py           # Alternative dataset implementation (unused)
 │   ├── constants.py             # Dataset constants
 │   └── Phoenix14T/              # Dataset directory (to be downloaded)
 ├── fusion_model.py          # Cross-attention fusion components
@@ -27,7 +27,7 @@ SignVLM combines visual features, optical flow motion data, and pose landmarks t
 ├── optical_flow_encoder.py # Dense optical flow computation
 ├── dynamic_chunker.py      # Dynamic sequence chunking
 ├── quantization_module.py  # Vector quantization
-├── sign_adapter.py         # SignAdapter fusion modules
+├── sign_adapter.py         # SignAdapter fusion modules (unused)
 └── data_utils.py          # Data processing utilities
 ```
 
