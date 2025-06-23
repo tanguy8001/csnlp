@@ -1,0 +1,74 @@
+{
+  "os": "Linux-6.8.0-41-generic-x86_64-with-glibc2.39",
+  "python": "CPython 3.10.16",
+  "startedAt": "2025-06-23T06:07:45.652386Z",
+  "program": "/work/scratch/tdieudonne/train.py",
+  "codePath": "train.py",
+  "email": "tdieudonne@student.ethz.ch",
+  "root": "/work/scratch/tdieudonne",
+  "host": "studgpu-node01.inf.ethz.ch",
+  "executable": "/work/courses/csnlp/Team3/envs/csnlp/bin/python",
+  "codePathLocal": "train.py",
+  "cpu_count": 20,
+  "cpu_count_logical": 20,
+  "gpu": "NVIDIA GeForce GTX 1080 Ti",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "73861140480",
+      "used": "47909752832"
+    }
+  },
+  "memory": {
+    "total": "270345093120"
+  },
+  "cpu": {
+    "count": 20,
+    "countLogical": 20
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce GTX 1080 Ti",
+      "memoryTotal": "11811160064",
+      "cudaCores": 3584,
+      "architecture": "Pascal"
+    }
+  ],
+  "slurm": {
+    "cluster_name": "cluster",
+    "conf": "/etc/slurm/slurm.conf",
+    "cpus_on_node": "2",
+    "gpus_on_node": "1",
+    "gtids": "0",
+    "job_account": "pmlr_jobs",
+    "job_cpus_per_node": "2",
+    "job_end_time": "1750694831",
+    "job_gid": "519493",
+    "job_gpus": "1",
+    "job_id": "62452",
+    "job_name": "train.sh",
+    "job_nodelist": "studgpu-node01",
+    "job_num_nodes": "1",
+    "job_partition": "jobs",
+    "job_qos": "tdieudonne-pmlr_jobs",
+    "job_start_time": "1750658831",
+    "job_uid": "638613",
+    "job_user": "tdieudonne",
+    "jobid": "62452",
+    "localid": "0",
+    "mem_per_node": "24576",
+    "nnodes": "1",
+    "nodeid": "0",
+    "nodelist": "studgpu-node01",
+    "oom_kill_step": "0",
+    "prio_process": "0",
+    "procid": "0",
+    "submit_dir": "/work/scratch/tdieudonne",
+    "submit_host": "student-cluster.inf.ethz.ch",
+    "task_pid": "3531321",
+    "tasks_per_node": "2",
+    "topology_addr": "studgpu-node01",
+    "topology_addr_pattern": "node"
+  },
+  "cudaVersion": "12.8"
+}

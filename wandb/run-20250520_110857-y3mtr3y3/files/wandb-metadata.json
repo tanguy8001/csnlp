@@ -1,0 +1,78 @@
+{
+  "os": "Linux-6.8.0-41-generic-x86_64-with-glibc2.39",
+  "python": "CPython 3.10.16",
+  "startedAt": "2025-05-20T09:08:57.303903Z",
+  "program": "/work/courses/csnlp/Team3/slt/train.py",
+  "codePath": "slt/train.py",
+  "git": {
+    "remote": "https://github.com/tanguy8001/csnlp.git",
+    "commit": "de15bb85b8f9dd64aaee08ac84ce0f884abc79fa"
+  },
+  "email": "tdieudonne@student.ethz.ch",
+  "root": "/work/courses/csnlp/Team3/slt",
+  "host": "studgpu-node26.inf.ethz.ch",
+  "executable": "/work/courses/csnlp/Team3/envs/csnlp/bin/python",
+  "codePathLocal": "train.py",
+  "cpu_count": 20,
+  "cpu_count_logical": 20,
+  "gpu": "NVIDIA GeForce GTX 1080 Ti",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "73861140480",
+      "used": "44791914496"
+    }
+  },
+  "memory": {
+    "total": "270345109504"
+  },
+  "cpu": {
+    "count": 20,
+    "countLogical": 20
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce GTX 1080 Ti",
+      "memoryTotal": "11811160064",
+      "cudaCores": 3584,
+      "architecture": "Pascal"
+    }
+  ],
+  "slurm": {
+    "cluster_name": "cluster",
+    "conf": "/etc/slurm/slurm.conf",
+    "cpus_on_node": "2",
+    "gpus_on_node": "1",
+    "gtids": "0",
+    "job_account": "csnlp_jobs",
+    "job_cpus_per_node": "2",
+    "job_end_time": "1747775316",
+    "job_gid": "519493",
+    "job_gpus": "7",
+    "job_id": "35467",
+    "job_name": "train.sh",
+    "job_nodelist": "studgpu-node26",
+    "job_num_nodes": "1",
+    "job_partition": "jobs",
+    "job_qos": "tdieudonne-csnlp_jobs",
+    "job_start_time": "1747732116",
+    "job_uid": "638613",
+    "job_user": "tdieudonne",
+    "jobid": "35467",
+    "localid": "0",
+    "mem_per_node": "24576",
+    "nnodes": "1",
+    "nodeid": "0",
+    "nodelist": "studgpu-node26",
+    "oom_kill_step": "0",
+    "prio_process": "0",
+    "procid": "0",
+    "submit_dir": "/work/courses/csnlp/Team3/slt",
+    "submit_host": "student-cluster.inf.ethz.ch",
+    "task_pid": "581274",
+    "tasks_per_node": "2",
+    "topology_addr": "studgpu-node26",
+    "topology_addr_pattern": "node"
+  },
+  "cudaVersion": "12.8"
+}

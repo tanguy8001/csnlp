@@ -1,0 +1,1 @@
+{"_runtime":150.212723084,"avg_train_loss":12.377756161159938,"llm_loss":13.411795616149902,"epoch":1,"_step":3,"batch_loss":13.419949531555176,"commitment_loss":0.03261708468198776,"_timestamp":1.7477503523420932e+09,"_wandb":{"runtime":152}}

@@ -1,0 +1,75 @@
+_wandb:
+    value:
+        cli_version: 0.19.11
+        m: []
+        python_version: 3.10.16
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 51
+                - 53
+                - 55
+                - 71
+                - 98
+            "2":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 51
+                - 53
+                - 55
+                - 71
+                - 98
+            "3":
+                - 16
+                - 23
+                - 55
+            "4": 3.10.16
+            "5": 0.19.11
+            "6": 4.51.3
+            "8":
+                - 5
+            "12": 0.19.11
+            "13": linux-x86_64
+approach:
+    value: prepending
+architecture:
+    value: SignVLMDynamic
+batch_size:
+    value: 4
+d_model:
+    value: 768
+data_path:
+    value: datasets/Phoenix14T
+device:
+    value: cuda
+flow_stride:
+    value: 2
+landmark_dim:
+    value: 129
+learning_rate:
+    value: 5e-05
+llm_name:
+    value: meta-llama/Llama-3.2-1B
+max_frames:
+    value: 256
+motion_dim:
+    value: 2
+num_epochs:
+    value: 20
+num_fusion_layers:
+    value: 2
+num_query_tokens:
+    value: 24
+visual_dim:
+    value: 768
+warmup_steps:
+    value: 100
+weight_decay:
+    value: 0.01

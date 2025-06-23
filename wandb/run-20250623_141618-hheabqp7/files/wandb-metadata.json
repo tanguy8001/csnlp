@@ -1,0 +1,27 @@
+{
+  "os": "Linux-6.8.0-58-generic-x86_64-with-glibc2.39",
+  "python": "CPython 3.10.16",
+  "startedAt": "2025-06-23T12:16:18.439971Z",
+  "program": "/work/scratch/tdieudonne/train.py",
+  "codePath": "train.py",
+  "email": "tdieudonne@student.ethz.ch",
+  "root": "/work/scratch/tdieudonne",
+  "host": "student-cluster.inf.ethz.ch",
+  "executable": "/work/courses/csnlp/Team3/envs/csnlp/bin/python",
+  "codePathLocal": "train.py",
+  "cpu_count": 24,
+  "cpu_count_logical": 24,
+  "disk": {
+    "/": {
+      "total": "73861140480",
+      "used": "31235866624"
+    }
+  },
+  "memory": {
+    "total": "270377508864"
+  },
+  "cpu": {
+    "count": 24,
+    "countLogical": 24
+  }
+}

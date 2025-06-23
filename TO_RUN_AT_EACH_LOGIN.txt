@@ -1,0 +1,4 @@
+source /work/courses/csnlp/Team3/env.sh
+export PYTHONPATH="/work/scratch/tdieudonne:$PYTHONPATH" 
+export TRANSFORMERS_CACHE=/work/courses/csnlp/Team3/slt/cache
+conda activate csnlp

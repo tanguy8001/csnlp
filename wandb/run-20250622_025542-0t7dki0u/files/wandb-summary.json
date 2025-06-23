@@ -1,0 +1,1 @@
+{"_runtime":1172.719995025,"_wandb":{"runtime":1302},"codebook_entropy":6.584691902844497e-09,"learning_rate":5e-06,"global_step":10,"codebook_usage":0.001953125,"epoch":1,"commitment_loss":1.6982810497283936,"codebook_loss":1.6982810497283936,"num_chunks":4,"train_loss":10.861116409301758,"_step":0,"_timestamp":1.7505549156404905e+09}

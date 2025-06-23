@@ -1,0 +1,8 @@
+Starting train.py at Sun Jun 22 03:18:55 CEST 2025
+/work/courses/csnlp/Team3/envs/csnlp/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1750555153.651292 3078736 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1750555153.722714 3078786 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.86.15), renderer: NVIDIA GeForce GTX 1080 Ti/PCIe/SSE2
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+slurmstepd: error: *** JOB 62393 ON studgpu-node01 CANCELLED AT 2025-06-22T03:19:13 ***

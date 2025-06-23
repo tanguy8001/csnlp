@@ -1,0 +1,1 @@
+{"BLEU-4":0,"_timestamp":1.74784951094596e+09,"ROUGE-L":0,"_wandb":{"runtime":111},"epoch":1,"avg_train_loss":0.4774229238430659,"BLEU-3":0,"_runtime":101.114054595,"BLEU-2":0,"llm_loss":9.398615837097168,"codebook_loss":0.04752768948674202,"_step":5,"batch_loss":0.05940961092710495,"enc_commitment_loss":0.04752768948674202,"BLEU-1":0}
