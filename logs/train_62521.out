@@ -1,6 +1,0 @@
-Starting train.py at Mon Jun 23 14:15:22 CEST 2025
-Working directory: /work/scratch/tdieudonne
-PYTHONPATH: /work/scratch/tdieudonne:/work/scratch/tdieudonne:
-/work/courses/csnlp/Team3/envs/csnlp/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
-  warnings.warn(
-slurmstepd: error: *** JOB 62521 ON studgpu-node01 CANCELLED AT 2025-06-23T14:15:27 ***
