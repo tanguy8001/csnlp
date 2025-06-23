@@ -10,7 +10,7 @@ import torch.nn as nn
 from torch.utils.data import DataLoader, random_split
 import numpy as np
 from tqdm import tqdm
-import wandb
+# import wandb  # Removed for submission
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from rouge_score import rouge_scorer
 
@@ -252,33 +252,27 @@ def evaluate_model_test(model, val_dataloader, device):
 
 
 def main():
-    # === Initialize WandB ===
-    # TEMPORARILY DISABLED FOR DEBUGGING
-    wandb.init(
-        project=WANDB_PROJECT_NAME,
-        entity=WANDB_ENTITY,
-        config={
-            "device": DEVICE,
-            "batch_size": BATCH_SIZE,
-            "max_frames": MAX_FRAMES,
-            "visual_dim": VISUAL_DIM,
-            "landmark_dim": LANDMARK_DIM,
-            "motion_dim": MOTION_DIM,
-            "d_model": D_MODEL,
-            "num_fusion_layers": NUM_FUSION_LAYERS,
-            "num_query_tokens": NUM_QUERY_TOKENS,
-            "flow_stride": FLOW_STRIDE,
-            "llm_name": LLM_NAME,
-            "data_path": DATA_PATH,
-            "num_epochs": NUM_EPOCHS,
-            "learning_rate": LEARNING_RATE,
-            "warmup_steps": WARMUP_STEPS,
-            "weight_decay": WEIGHT_DECAY,
-            "architecture": "SignVLMDynamic",
-            "approach": APPROACH,
-        }
-    )
-    #print("✅ WandB disabled for debugging")
+    # === Initialize Training ===
+    print("✅ Starting SignVLM training (WandB disabled for TA submission)")
+    print(f"📋 Configuration:")
+    print(f"   - Device: {DEVICE}")
+    print(f"   - Batch size: {BATCH_SIZE}")
+    print(f"   - Max frames: {MAX_FRAMES}")
+    print(f"   - Visual dim: {VISUAL_DIM}")
+    print(f"   - Landmark dim: {LANDMARK_DIM}")
+    print(f"   - Motion dim: {MOTION_DIM}")
+    print(f"   - Model dim: {D_MODEL}")
+    print(f"   - Fusion layers: {NUM_FUSION_LAYERS}")
+    print(f"   - Query tokens: {NUM_QUERY_TOKENS}")
+    print(f"   - Flow stride: {FLOW_STRIDE}")
+    print(f"   - LLM: {LLM_NAME}")
+    print(f"   - Data path: {DATA_PATH}")
+    print(f"   - Epochs: {NUM_EPOCHS}")
+    print(f"   - Learning rate: {LEARNING_RATE}")
+    print(f"   - Warmup steps: {WARMUP_STEPS}")
+    print(f"   - Weight decay: {WEIGHT_DECAY}")
+    print(f"   - Architecture: {APPROACH}")
+    print()
     
     # === Load Model ===
     if APPROACH == "dynamic":
@@ -450,24 +444,16 @@ def main():
                 })
                 
                 if global_step % LOG_EVERY == 0:
-                    log_dict = {
-                        "train_loss": loss.item(),
-                        "learning_rate": scheduler.get_last_lr()[0],
-                        "epoch": epoch + 1,
-                        "global_step": global_step
-                    }
+                    # Log metrics to console instead of wandb
+                    print(f"Step {global_step}: loss={loss.item():.4f}, lr={scheduler.get_last_lr()[0]:.2e}")
                     
                     if hasattr(model, 'last_diagnostics'):
                         diag = model.last_diagnostics
-                        log_dict.update({
-                            "codebook_usage": diag['codebook_usage'],
-                            "codebook_entropy": diag['codebook_entropy'], 
-                            "num_chunks": diag['num_chunks'],
-                            "commitment_loss": diag['commitment_loss'],
-                            "codebook_loss": diag['codebook_loss']
-                        })
+                        print(f"   Diagnostics: codebook_usage={diag.get('codebook_usage', 'N/A'):.3f}, "
+                              f"entropy={diag.get('codebook_entropy', 'N/A'):.3f}, "
+                              f"chunks={diag.get('num_chunks', 'N/A')}")
                     
-                    wandb.log(log_dict)
+                    # wandb.log(log_dict)  # Disabled for TA submission
                 
                 if batch_idx % (LOG_EVERY * 5) == 0:
                     print(f"Epoch [{epoch+1}/{NUM_EPOCHS}], Batch [{batch_idx+1}/{len(train_dataloader)}], "
@@ -489,12 +475,12 @@ def main():
             eval_metrics = evaluate_model(model, val_dataloader, DEVICE)
             print(f"Epoch [{epoch+1}/{NUM_EPOCHS}] Validation Metrics: {eval_metrics}")
             
-            # Log to wandb
-            wandb.log({
-                "epoch": epoch + 1,
-                "avg_train_loss": avg_epoch_loss,
-                **eval_metrics
-            })
+            # Log to console instead of wandb
+            print(f"📊 Epoch {epoch + 1} Summary:")
+            print(f"   - Average train loss: {avg_epoch_loss:.4f}")
+            for metric, value in eval_metrics.items():
+                print(f"   - {metric}: {value:.4f}")
+            print()
             
             # Save best model
             if eval_metrics["ROUGE-L"] > best_rouge:
@@ -545,8 +531,8 @@ def main():
     except Exception as e:
         print(f"❌ Failed to save final checkpoint: {e}")
     
-    wandb.finish()
-    print("Script finished.")
+    # wandb.finish()  # Disabled for submission
+    print("🎉 Training completed successfully!")
 
 
 if __name__ == "__main__":
