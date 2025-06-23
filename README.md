@@ -10,9 +10,6 @@ SignVLM combines visual features, optical flow motion data, and pose landmarks t
 
 - **Multimodal Fusion**: Combines visual (CLIP), motion (optical flow), and landmark (pose) features
 - **Multiple Architectures**: Different model variants with varying complexity
-- **Spatial Normalization**: Advanced landmark normalization for scale/position invariance  
-- **T5 Integration**: YouTubeASL-inspired encoder-decoder architecture
-- **Robust Training**: Checkpoint resuming, gradient clipping, and learning rate scheduling
 
 ## 📁 Project Structure
 
